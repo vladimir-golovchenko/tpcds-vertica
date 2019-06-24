@@ -1,0 +1,2 @@
+vsql -wdbadmin -c"alter user dbadmin  SEARCH_PATH org"
+for fname in `cat list`; do (vsql -wdbadmin -if $fname 2>&1 ) > log/${fname}.log; done 
